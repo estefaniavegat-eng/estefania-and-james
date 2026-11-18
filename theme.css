@@ -1,8 +1,8 @@
 /* =====================================================================
    🎨  THEME — the ONE place to change the site's colors
    ---------------------------------------------------------------------
-   Easiest:  open index.html and change  data-theme="burgundy"  on the
-             <html> tag to  noir, ivory, amalfi, midnight, or sage.
+   Easiest:  open index.html and change  data-theme="noir"  on the
+             <html> tag to  burgundy, ivory, amalfi, midnight, or sage.
    Custom:   edit the 6 hex values in any block below (or the :root one).
              Every color on the site comes from these variables.
    Guests can also tap the color dots (bottom-right) to preview palettes;
@@ -10,7 +10,7 @@
    ===================================================================== */
 
 :root,
-[data-theme="burgundy"] {           /* default — matches the save-the-date stripes */
+[data-theme="burgundy"] {           /* burgundy — matches the save-the-date stripes */
   --bg:       #F5EEE4;  /* page background            */
   --surface:  #FFFFFF;  /* cards                      */
   --ink:      #2B1614;  /* main text                  */
@@ -50,7 +50,7 @@
   --on-accent:#F7FAF4;
 }
 
-[data-theme="noir"] {               /* crisp black & white, rose used sparingly */
+[data-theme="noir"] {               /* default — crisp black & white, rose used sparingly */
   --bg:       #F7F7F5;
   --surface:  #FFFFFF;
   --ink:      #111111;

@@ -35,7 +35,7 @@ section{padding:clamp(4.5rem,11vw,8.5rem) 0;scroll-margin-top:64px}
 
 /* ---------- hero ---------- */
 .hero{position:relative;min-height:100svh;display:grid;align-items:end;padding:0 0 clamp(2.5rem,7vw,5rem);color:#fff;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(assets/photos/hero.jpg) center 8%/cover no-repeat;transform:scale(1.04);transform-origin:center 12%;animation:zoom 14s ease-out forwards}
+.hero .bg{position:absolute;inset:0;background:url(assets/photos/hero.jpg) center 8%/cover no-repeat;background-image:image-set(url(assets/photos/hero.webp) type("image/webp"),url(assets/photos/hero.jpg) type("image/jpeg"));background-position:center 8%;background-size:cover;background-repeat:no-repeat;transform:scale(1.04);transform-origin:center 12%;animation:zoom 14s ease-out forwards}
 @media (max-width:700px){
   .hero .bg{background-position:center top;transform-origin:center 8%;transform:scale(1.03)}
 }
