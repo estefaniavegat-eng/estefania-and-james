@@ -73,7 +73,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 
 /* Desktop/tablet only: truly full-screen cover. Mobile (<=820px) stays exactly as-is. */
 @media (min-width:821px){
-  .hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;margin-top:0;max-width:none;object-fit:cover;object-position:center 18%;flex:none;align-self:stretch;transform:scale(1.12);transform-origin:center 32%}
+  .hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;margin-top:0;max-width:none;object-fit:cover;object-position:center 32%;flex:none;align-self:stretch}
   .hero-media::after{width:min(50rem,80vw);height:72%}
   .hero h1{max-width:18ch}
   [data-theme="lounge"] .nav{color:#1A1410}
