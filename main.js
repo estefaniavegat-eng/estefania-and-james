@@ -89,4 +89,30 @@
     });
   })();
 
+
+  // Ring video: pause and show the poster when the guest prefers less motion
+  (function(){
+    var fig=document.querySelector('.hero-print');
+    if(!fig) return;
+    var v=fig.querySelector('.ring-video');
+    var img=fig.querySelector('.ring-fallback');
+    if(!v) return;
+    function apply(reduce){
+      if(reduce){
+        v.pause();
+        v.removeAttribute('autoplay');
+        v.hidden=true;
+        if(img) img.hidden=false;
+      }else{
+        v.hidden=false;
+        if(img) img.hidden=true;
+        v.play().catch(function(){});
+      }
+    }
+    var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+    apply(mq.matches);
+    if(mq.addEventListener) mq.addEventListener('change',function(e){apply(e.matches)});
+    else if(mq.addListener) mq.addListener(function(e){apply(e.matches)});
+  })();
+
 })();

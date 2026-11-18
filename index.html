@@ -1,6 +1,6 @@
 <!doctype html>
-<!-- Change the default color palette here: noir | burgundy | ivory | amalfi | midnight | sage  (see theme.css) -->
-<html lang="en" data-theme="noir">
+<!-- Change the default color palette here: vintage | noir | burgundy | ivory | amalfi | midnight | sage  (see theme.css) -->
+<html lang="en" data-theme="vintage">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,14 +8,14 @@
 <meta name="description" content="Estefania Vega &amp; James LaRosa are getting married October 16, 2027 at Pete Dye Golf Club in Bridgeport, West Virginia.">
 <meta property="og:title" content="Estefania &amp; James · 10.16.2027">
 <meta property="og:description" content="Pete Dye Golf Club · Bridgeport, WV">
-<meta property="og:image" content="assets/photos/hero.jpg">
-<meta name="theme-color" content="#111111">
+<meta property="og:image" content="assets/video/ring-poster.jpg">
+<meta name="theme-color" content="#FBF8F0">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png">
 <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+SC:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 <script>
@@ -54,17 +54,41 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="bg" role="img" aria-label="Estefania and James by the sea"></div>
-  <div class="wrap">
-    <h1><span>Estefania</span><span>&amp;</span><span>James</span></h1>
-    <div class="meta"><span>10.16.2027</span><span>Pete Dye Golf Club</span><span>Bridgeport, WV</span></div>
+  <div class="hero-frame" aria-hidden="true">
+    <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
   </div>
-  <a class="scrollcue" href="#details">Scroll ↓</a>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-rose">
+        <picture>
+          <source type="image/webp" srcset="assets/brand/rose-256.webp">
+          <img src="assets/brand/rose-256.png" width="210" height="256" alt="">
+        </picture>
+      </div>
+      <p class="script">Save the Date</p>
+      <h1>Estefania <i>&amp;</i> James</h1>
+      <div class="flourish" aria-hidden="true"></div>
+      <div class="meta">
+        <span>October 16, 2027</span>
+        <span>Pete Dye Golf Club</span>
+        <span>Bridgeport, West Virginia</span>
+      </div>
+    </div>
+    <figure class="print hero-print">
+      <video class="ring-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/ring-poster.jpg" width="720" height="1280" aria-label="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea">
+        <source src="assets/video/ring.webm" type="video/webm">
+        <source src="assets/video/ring.mp4" type="video/mp4">
+      </video>
+      <img class="ring-fallback" src="assets/video/ring-poster.jpg" alt="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea" width="720" height="1280" hidden>
+      <figcaption>The ring</figcaption>
+    </figure>
+  </div>
+  <a class="scrollcue" href="#details">Scroll</a>
 </header>
 
 <div class="marquee" aria-hidden="true"><div>
-  We're getting married <b>✦</b> October 16, 2027 <b>✦</b> Pete Dye Golf Club <b>✦</b> Bridgeport, West Virginia <b>✦</b>
-  We're getting married <b>✦</b> October 16, 2027 <b>✦</b> Pete Dye Golf Club <b>✦</b> Bridgeport, West Virginia <b>✦</b>
+  We're getting married <b>&amp;</b> October 16, 2027 <b>&amp;</b> Pete Dye Golf Club <b>&amp;</b> Bridgeport, West Virginia <b>&amp;</b>
+  We're getting married <b>&amp;</b> October 16, 2027 <b>&amp;</b> Pete Dye Golf Club <b>&amp;</b> Bridgeport, West Virginia <b>&amp;</b>
 </div></div>
 
 <section id="details">
@@ -108,11 +132,14 @@
 </section>
 
 <section class="dress" id="attire">
+  <div class="lace-trim top" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow reveal">Dress code</div>
     <h2 class="reveal">Black <em>Tie</em></h2>
+    <div class="flourish" aria-hidden="true"></div>
     <p class="reveal">Bring your best! The ceremony is outdoors on the grass, so flats or block heels are your friend.</p>
   </div>
+  <div class="lace-trim bottom" aria-hidden="true"></div>
 </section>
 
 <section id="photos">
@@ -120,19 +147,19 @@
     <div class="eyebrow reveal">Us</div>
     <h2 class="reveal">A few <em>favorites</em></h2>
     <div class="photos">
-      <figure class="reveal">
-        <picture>
-          <source type="image/webp" srcset="assets/photos/hero.webp">
-          <img src="assets/photos/hero.jpg" alt="James lifting Estefania for a kiss by the sea" loading="lazy" width="1200" height="1600">
-        </picture>
-      </figure>
-      <figure class="reveal">
+      <figure class="print reveal">
         <picture>
           <source type="image/webp" srcset="assets/photos/smile.webp">
           <img src="assets/photos/smile.jpg" alt="Estefania and James smiling at each other" loading="lazy" width="1200" height="1600">
         </picture>
       </figure>
-      <figure class="reveal">
+      <figure class="print reveal">
+        <picture>
+          <source type="image/webp" srcset="assets/photos/hero.webp">
+          <img src="assets/photos/hero.jpg" alt="James lifting Estefania for a kiss by the sea" loading="lazy" width="1200" height="1600">
+        </picture>
+      </figure>
+      <figure class="print reveal">
         <picture>
           <source type="image/webp" srcset="assets/photos/dance.webp">
           <img src="assets/photos/dance.jpg" alt="Estefania and James dancing under the trees" loading="lazy" width="760" height="1013">
@@ -203,6 +230,7 @@
 </section>
 
 <footer>
+  <div class="lace-trim" aria-hidden="true"></div>
   <div class="wrap">
     <div class="logo">
       <picture>
@@ -216,8 +244,9 @@
 </footer>
 
 <div class="switch" id="switch" aria-label="Color theme">
-  <button data-t="burgundy" style="--a:#6B1E24;--b:#F5EEE4" title="Burgundy"></button>
+  <button data-t="vintage"  style="--a:#8B1A1A;--b:#FBF8F0" title="Vintage"></button>
   <button data-t="noir"     style="--a:#111111;--b:#F7F7F5" title="Noir"></button>
+  <button data-t="burgundy" style="--a:#6B1E24;--b:#F5EEE4" title="Burgundy"></button>
   <button data-t="ivory"    style="--a:#7A1519;--b:#FAF6EF" title="Ivory"></button>
   <button data-t="amalfi"   style="--a:#1F5FA8;--b:#F2C230" title="Amalfi"></button>
   <button data-t="midnight" style="--a:#0D0E13;--b:#D6B36A" title="Midnight"></button>

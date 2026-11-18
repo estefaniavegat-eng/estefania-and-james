@@ -1,23 +1,33 @@
 /* =====================================================================
    🎨  THEME — the ONE place to change the site's colors
    ---------------------------------------------------------------------
-   Easiest:  open index.html and change  data-theme="noir"  on the
-             <html> tag to  burgundy, ivory, amalfi, midnight, or sage.
-   Custom:   edit the 6 hex values in any block below (or the :root one).
+   Easiest:  open index.html and change  data-theme="vintage"  on the
+             <html> tag to  noir, burgundy, ivory, amalfi, midnight, or sage.
+   Custom:   edit the hex values in any block below (or the :root one).
              Every color on the site comes from these variables.
    Guests can also tap the color dots (bottom-right) to preview palettes;
    to hide that switcher, set  showThemeSwitcher: false  in index.html.
    ===================================================================== */
 
 :root,
+[data-theme="vintage"] {          /* default — cream paper, ink, wine script, rose */
+  --bg:       #FBF8F0;  /* warm cream paper            */
+  --surface:  #FFFCF6;  /* cards / prints              */
+  --ink:      #1A1410;  /* deep warm black             */
+  --muted:    #7A7168;  /* secondary text              */
+  --accent:   #1A1410;  /* bands, buttons, rules       */
+  --accent-2: #8B1A1A;  /* wine: script, rose accents  */
+  --on-accent:#FBF8F0;  /* text sitting on --accent    */
+}
+
 [data-theme="burgundy"] {           /* burgundy — matches the save-the-date stripes */
-  --bg:       #F5EEE4;  /* page background            */
-  --surface:  #FFFFFF;  /* cards                      */
-  --ink:      #2B1614;  /* main text                  */
-  --muted:    #7A6460;  /* secondary text             */
-  --accent:   #6B1E24;  /* buttons, highlights, bands */
-  --accent-2: #C9A27E;  /* small details / glow       */
-  --on-accent:#FFF8F0;  /* text sitting on --accent   */
+  --bg:       #F5EEE4;
+  --surface:  #FFFFFF;
+  --ink:      #2B1614;
+  --muted:    #7A6460;
+  --accent:   #6B1E24;
+  --accent-2: #C9A27E;
+  --on-accent:#FFF8F0;
 }
 
 [data-theme="amalfi"] {             /* lemon + sea blue, like the photos */
@@ -50,13 +60,13 @@
   --on-accent:#F7FAF4;
 }
 
-[data-theme="noir"] {               /* default — crisp black & white, rose used sparingly */
+[data-theme="noir"] {               /* crisp black & white, rose used sparingly */
   --bg:       #F7F7F5;
   --surface:  #FFFFFF;
   --ink:      #111111;
   --muted:    #6B6B6B;
-  --accent:   #111111;  /* bands, big card, footer */
-  --accent-2: #8B1A1F;  /* rose red, small highlights only */
+  --accent:   #111111;
+  --accent-2: #8B1A1F;
   --on-accent:#F7F7F5;
 }
 
@@ -66,6 +76,6 @@
   --ink:      #14110E;
   --muted:    #7A736A;
   --accent:   #7A1519;
-  --accent-2: #D4B896;  /* champagne hairlines */
+  --accent-2: #D4B896;
   --on-accent:#FAF6EF;
 }
