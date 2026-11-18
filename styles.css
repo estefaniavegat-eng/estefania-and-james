@@ -36,7 +36,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 .links a:hover,.links a.active{opacity:1;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
 .burger{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer;padding:10px}
 .burger span{display:block;height:1.5px;background:currentColor;margin:6px 0;transition:transform .3s,opacity .3s}
-@media (max-width:860px){
+@media (max-width:960px){
   .burger{display:block}
   .links{position:fixed;inset:64px 0 auto 0;flex-direction:column;gap:0;background:var(--bg);color:var(--ink);padding:.5rem 1.25rem 1.5rem;transform:translateY(-130%);transition:transform .4s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(0,0,0,.12)}
   .links a{display:block;padding:1rem 0;font-size:.95rem;border-bottom:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
@@ -140,6 +140,14 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 .dress .eyebrow{color:var(--accent-2)}
 .dress .flourish{background-color:var(--bg);margin-inline:auto}
 
+
+/* ---------- after party: charcoal band, white type, burgundy + a little gold ---------- */
+.after-party{background:#2F2A26;color:#FBF8F0;text-align:center;position:relative}
+.after-party .eyebrow{color:#C4A46A;font-weight:700}
+.after-party h2{color:#FBF8F0;font-weight:700;font-size:clamp(3.2rem,11vw,7.2rem);letter-spacing:.03em;line-height:.95;margin:.55rem auto 0}
+.after-party h2 em{color:#7A1F2B;font-weight:400}
+.after-party .flourish{background-color:#C4A46A;opacity:.75;margin:1.15rem auto 1.35rem}
+.after-party p{color:#FBF8F0;font-weight:700;font-size:clamp(1.08rem,2.2vw,1.28rem);line-height:1.65;max-width:38rem;margin:0 auto;opacity:.95}
 /* ---------- photos ---------- */
 .photos{columns:3;column-gap:1.15rem}
 .photos figure{margin:0 0 1.15rem;break-inside:avoid;-webkit-column-break-inside:avoid;cursor:zoom-in}
