@@ -47,21 +47,28 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
   .nav.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 }
 
-/* ---------- hero: full-bleed video, names + date in the sky, no overlay ---------- */
-.hero{position:relative;z-index:1;width:100%;height:100svh;min-height:100svh;display:grid;align-items:start;padding:0;color:#1A1410;background:#111;overflow:hidden}
-.hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 14%;z-index:0;pointer-events:none;border:0;filter:none}
-.hero-copy{position:relative;z-index:2;align-self:start;width:100%;max-width:none;padding:calc(64px + .25rem) clamp(1.4rem,4vw,3.25rem) 2rem;color:#1A1410;text-shadow:0 1px 2px rgba(255,255,255,.45)}
-.hero h1{font-family:var(--font-script);font-weight:400;font-size:clamp(2.7rem,3.8vw,4rem);letter-spacing:0;text-transform:none;line-height:.92;margin:0;display:flex;flex-direction:column}
-.hero h1 .amp{color:#8B1A1A;font-size:.7em;line-height:.85}
-.hero .meta{display:flex;flex-direction:column;gap:.28rem;margin:.85rem 0 0;font-family:var(--font-sc);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;color:#1A1410}
+/* ---------- hero: cinematic full-viewport video, centered cream title ---------- */
+.hero{position:relative;z-index:1;width:100%;height:100svh;min-height:100svh;display:grid;align-items:center;justify-items:center;padding:0;color:#FBF8F0;background:var(--bg);overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;display:flex;justify-content:center;pointer-events:none}
+/* Zoom out just enough (120vh, slightly top-shifted) to keep faces and the low-right hand/ring in frame. Side gaps use the page background, never a blur. */
+.hero-video,.hero-fallback{height:120vh;width:auto;max-width:none;flex:none;align-self:flex-start;margin-top:-7.2vh;object-fit:contain;object-position:center top;border:0;filter:none;background:transparent}
+/* very soft darkening only behind the title — clipped to the video column, no cream/sepia, not on gallery photos */
+.hero-media::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72vh;height:78%;background:radial-gradient(ellipse at center,rgba(0,0,0,.30) 0%,rgba(0,0,0,.14) 48%,transparent 74%);pointer-events:none}
+.hero-copy{position:relative;z-index:2;align-self:center;width:min(90rem,calc(100% - 2rem));text-align:center;padding:6.5rem 1.25rem 2.5rem;color:#FBF8F0;text-shadow:0 1px 2px rgba(0,0,0,.35),0 2px 14px rgba(0,0,0,.4)}
+.hero-kicker,.hero-sub{font-family:var(--font-sc);font-weight:400;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.68rem,1.5vw,.9rem);margin:0;color:#FBF8F0}
+.hero h1{position:relative;font-family:var(--font-serif);font-weight:300;font-size:clamp(3.2rem,5.6vw,5.8rem);letter-spacing:.03em;text-transform:none;line-height:.95;margin:.7rem auto 0;text-align:center;color:#FBF8F0;white-space:normal;max-width:68vh}
+.hero h1 .amp{color:#C45C58;font-style:italic;font-weight:300;padding:0 .12em}
+.hero-rule{position:relative;display:block;width:min(7.5rem,40%);border:0;border-top:1px solid rgba(251,248,240,.85);margin:1.15rem auto 1.05rem}
+.hero-cta{position:relative;display:inline-block;margin-top:1.35rem;padding:.7rem 1.45rem;border:1px solid #FBF8F0;color:#FBF8F0;text-decoration:none;font-family:var(--font-sc);font-weight:500;letter-spacing:.22em;text-transform:uppercase;font-size:.7rem;background:transparent;border-radius:1px;text-shadow:none;transition:background .2s,color .2s}
+.hero-cta:hover{background:rgba(251,248,240,.14);color:#FBF8F0}
 .nav{color:#1A1410}
 .nav.solid,.nav.open{color:var(--ink)}
 @media (max-width:820px){
-  .hero-copy{text-align:center;padding:1.2rem 3.6rem 0;display:flex;flex-direction:column;align-items:center;gap:0}
-  .hero h1{flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.08em .26em;font-size:clamp(1.7rem,7.4vw,2.2rem)}
-  .hero h1 .amp{font-size:.8em}
-  .hero .meta{flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:.15rem .6rem;margin-top:.1rem;font-size:.6rem}
-  .hero-venue{display:none}
+  /* Full-screen cover, pinned right so the extended hand and ring stay in the shot */
+  .hero-video,.hero-fallback{height:100%;width:100%;margin-top:0;object-fit:cover;object-position:right center}
+  .hero-media::after{width:115%;height:70%}
+  .hero-copy{width:min(36rem,calc(100% - 1.5rem));padding:5.5rem 1rem 2rem}
+  .hero h1{font-size:clamp(2.6rem,12.5vw,4.4rem);white-space:normal;max-width:none}
 }
 
 /* vintage print frame (stills + the ring video) */
@@ -74,6 +81,9 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 .marquee{background:var(--accent);color:var(--on-accent);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:var(--font-serif);font-size:clamp(1.25rem,3.2vw,1.85rem);font-style:italic;position:relative}
 .marquee div{display:inline-block;animation:slide 36s linear infinite}
 .marquee b{font-style:normal;color:var(--accent-2);margin:0 1.1rem;font-family:var(--font-script);font-size:1.15em}
+/* vintage ticker: burgundy band, cream type and diamonds (not black) */
+[data-theme="vintage"] .marquee{background:#7A1F2B;color:#FBF8F0}
+[data-theme="vintage"] .marquee b{color:#FBF8F0;font-family:Georgia,serif;font-style:normal;font-size:1em;font-weight:400}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ---------- countdown ---------- */
@@ -176,6 +186,12 @@ footer p{font-family:var(--font-sc);letter-spacing:.2em;text-transform:uppercase
 .switch button[aria-pressed="true"]{border-color:var(--ink);transform:scale(1.12)}
 
 
+
+[data-theme="lounge"] .nav{color:var(--ink)}
+@media (max-width:820px){
+  [data-theme="lounge"] .nav{color:#1A1410}
+  [data-theme="lounge"] .nav.solid,[data-theme="lounge"] .nav.open{color:var(--ink)}
+}
 /* ---------- lounge: a few gold touches, dark dress band ---------- */
 [data-theme="lounge"] .flourish{background-color:var(--gold)}
 [data-theme="lounge"] .marquee b{color:var(--gold)}
@@ -194,5 +210,5 @@ footer p{font-family:var(--font-sc);letter-spacing:.2em;text-transform:uppercase
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
-  .reveal,.hero h1,.hero .script,.hero .meta{opacity:1;transform:none}
+  .reveal,.hero h1,.hero-kicker,.hero-sub,.hero-cta{opacity:1;transform:none}
 }
