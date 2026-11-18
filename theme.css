@@ -2,7 +2,8 @@
    🎨  THEME — the ONE place to change the site's colors
    ---------------------------------------------------------------------
    Easiest:  open index.html and change  data-theme="vintage"  on the
-             <html> tag to  noir, burgundy, ivory, amalfi, midnight, or sage.
+             <html> tag to  lounge, noir, burgundy, ivory, amalfi, midnight, or sage.
+             Preview a palette with ?theme=lounge (does not overwrite a saved choice).
    Custom:   edit the hex values in any block below (or the :root one).
              Every color on the site comes from these variables.
    Guests can also tap the color dots (bottom-right) to preview palettes;
@@ -18,6 +19,19 @@
   --accent:   #1A1410;  /* bands, buttons, rules       */
   --accent-2: #8B1A1A;  /* wine: script, rose accents  */
   --on-accent:#FBF8F0;  /* text sitting on --accent    */
+  --gold:     #8B1A1A;  /* unused in vintage; lounge sets a real gold */
+}
+
+
+[data-theme="lounge"] {             /* cigar-lounge — preview with ?theme=lounge */
+  --bg:       #13110F;  /* near-black warm charcoal    */
+  --surface:  #1C1916;  /* slightly lighter charcoal   */
+  --ink:      #F3EDE3;  /* cream text                  */
+  --muted:    #A89F93;  /* secondary cream             */
+  --accent:   #6B1E24;  /* burgundy bands / footer     */
+  --accent-2: #C45C58;  /* lighter burgundy for script */
+  --on-accent:#F3EDE3;  /* cream on burgundy           */
+  --gold:     #C4A46A;  /* a few small gold touches    */
 }
 
 [data-theme="burgundy"] {           /* burgundy — matches the save-the-date stripes */

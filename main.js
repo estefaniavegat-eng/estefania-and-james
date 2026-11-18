@@ -42,12 +42,14 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(n){io.observe(n)});
 
-  // Theme switcher
+  // Theme switcher (URL ?theme= takes precedence for this visit; clicks still save)
   var sw=document.getElementById('switch');
-  if(S.showThemeSwitcher===false){sw.remove();return}
-  function mark(){sw.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===root.dataset.theme)})}
-  sw.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;root.dataset.theme=b.dataset.t;try{localStorage.setItem('ej-theme',b.dataset.t)}catch(_){}mark()});
-  mark();
+  if(S.showThemeSwitcher===false){if(sw)sw.remove()}
+  else if(sw){
+    function mark(){sw.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===root.dataset.theme)})}
+    sw.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;root.dataset.theme=b.dataset.t;try{localStorage.setItem('ej-theme',b.dataset.t)}catch(_){}mark()});
+    mark();
+  }
 
   // Photo lightbox
   (function(){
@@ -90,12 +92,10 @@
   })();
 
 
-  // Ring video: pause and show the poster when the guest prefers less motion
+  // Hero video: pause and show the poster when the guest prefers less motion
   (function(){
-    var fig=document.querySelector('.hero-print');
-    if(!fig) return;
-    var v=fig.querySelector('.ring-video');
-    var img=fig.querySelector('.ring-fallback');
+    var v=document.querySelector('.hero-video');
+    var img=document.querySelector('.hero-fallback');
     if(!v) return;
     function apply(reduce){
       if(reduce){

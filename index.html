@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Change the default color palette here: vintage | noir | burgundy | ivory | amalfi | midnight | sage  (see theme.css) -->
+<!-- Change the default color palette here: vintage | lounge | noir | burgundy | ivory | amalfi | midnight | sage  (see theme.css). Preview any palette with ?theme=lounge (etc). -->
 <html lang="en" data-theme="vintage">
 <head>
 <meta charset="utf-8">
@@ -26,7 +26,12 @@
     registryUrl: "",    // paste a registry link here and a Registry button appears (empty = hidden)
     showThemeSwitcher: true
   };
-  try{var t=localStorage.getItem("ej-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
+  (function(){
+    var allowed={vintage:1,lounge:1,noir:1,burgundy:1,ivory:1,amalfi:1,midnight:1,sage:1};
+    var q=new URLSearchParams(location.search).get("theme");
+    if(q&&allowed[q]){document.documentElement.dataset.theme=q;return}
+    try{var t=localStorage.getItem("ej-theme");if(t&&allowed[t])document.documentElement.dataset.theme=t}catch(e){}
+  })();
 </script>
 </head>
 <body>
@@ -54,36 +59,19 @@
 </nav>
 
 <header class="hero" id="top">
-  <div class="hero-frame" aria-hidden="true">
-    <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
-  </div>
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="hero-rose">
-        <picture>
-          <source type="image/webp" srcset="assets/brand/rose-256.webp">
-          <img src="assets/brand/rose-256.png" width="210" height="256" alt="">
-        </picture>
-      </div>
-      <p class="script">Save the Date</p>
-      <h1>Estefania <i>&amp;</i> James</h1>
-      <div class="flourish" aria-hidden="true"></div>
-      <div class="meta">
-        <span>October 16, 2027</span>
-        <span>Pete Dye Golf Club</span>
-        <span>Bridgeport, West Virginia</span>
-      </div>
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/ring-poster.jpg" width="1080" height="1920" aria-label="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea">
+    <source src="assets/video/ring.webm" type="video/webm">
+    <source src="assets/video/ring.mp4" type="video/mp4">
+  </video>
+  <img class="hero-fallback" src="assets/video/ring-poster.jpg" alt="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea" width="1080" height="1920" hidden>
+  <div class="hero-copy">
+    <h1><span>Estefania</span><span class="amp">&amp;</span><span>James</span></h1>
+    <div class="meta">
+      <span>10.16.2027</span>
+      <span class="hero-venue">Pete Dye Golf Club</span>
+      <span class="hero-venue">Bridgeport, WV</span>
     </div>
-    <figure class="print hero-print">
-      <video class="ring-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/ring-poster.jpg" width="720" height="1280" aria-label="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea">
-        <source src="assets/video/ring.webm" type="video/webm">
-        <source src="assets/video/ring.mp4" type="video/mp4">
-      </video>
-      <img class="ring-fallback" src="assets/video/ring-poster.jpg" alt="Estefania laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea" width="720" height="1280" hidden>
-      <figcaption>The ring</figcaption>
-    </figure>
   </div>
-  <a class="scrollcue" href="#details">Scroll</a>
 </header>
 
 <div class="marquee" aria-hidden="true"><div>
@@ -102,7 +90,7 @@
     </div>
 
     <div class="eyebrow reveal" style="margin-top:5rem">The details</div>
-    <h2 class="reveal">Save the <em>date</em></h2>
+    <h2 class="reveal">The <em>day</em></h2>
     <div class="grid2">
       <div class="card big reveal">
         <div class="eyebrow">Saturday</div>
@@ -245,6 +233,7 @@
 
 <div class="switch" id="switch" aria-label="Color theme">
   <button data-t="vintage"  style="--a:#8B1A1A;--b:#FBF8F0" title="Vintage"></button>
+  <button data-t="lounge"   style="--a:#6B1E24;--b:#C4A46A" title="Lounge"></button>
   <button data-t="noir"     style="--a:#111111;--b:#F7F7F5" title="Noir"></button>
   <button data-t="burgundy" style="--a:#6B1E24;--b:#F5EEE4" title="Burgundy"></button>
   <button data-t="ivory"    style="--a:#7A1519;--b:#FAF6EF" title="Ivory"></button>
