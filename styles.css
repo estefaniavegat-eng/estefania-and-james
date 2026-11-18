@@ -55,7 +55,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 /* very soft darkening only behind the title — clipped to the video column, no cream/sepia, not on gallery photos */
 .hero-media::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72vh;height:78%;background:radial-gradient(ellipse at center,rgba(0,0,0,.30) 0%,rgba(0,0,0,.14) 48%,transparent 74%);pointer-events:none}
 .hero-copy{position:relative;z-index:2;align-self:center;width:min(90rem,calc(100% - 2rem));text-align:center;padding:6.5rem 1.25rem 2.5rem;color:#FBF8F0;text-shadow:0 1px 2px rgba(0,0,0,.35),0 2px 14px rgba(0,0,0,.4)}
-.hero-kicker,.hero-sub{font-family:var(--font-sc);font-weight:400;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.68rem,1.5vw,.9rem);margin:0;color:#FBF8F0}
+.hero-kicker,.hero-sub{font-family:var(--font-sc);font-weight:700;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.68rem,1.5vw,.9rem);margin:0;color:#FBF8F0;text-shadow:0 1px 2px rgba(0,0,0,.55),0 2px 16px rgba(0,0,0,.5)}
 .hero h1{position:relative;font-family:var(--font-serif);font-weight:300;font-size:clamp(3.2rem,5.6vw,5.8rem);letter-spacing:.03em;text-transform:none;line-height:.95;margin:.7rem auto 0;text-align:center;color:#FBF8F0;white-space:normal;max-width:68vh}
 .hero h1 .amp{color:#C45C58;font-style:italic;font-weight:300;padding:0 .12em}
 .hero-rule{position:relative;display:block;width:min(7.5rem,40%);border:0;border-top:1px solid rgba(251,248,240,.85);margin:1.15rem auto 1.05rem}
@@ -69,6 +69,15 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
   .hero-media::after{width:115%;height:70%}
   .hero-copy{width:min(36rem,calc(100% - 1.5rem));padding:5.5rem 1rem 2rem}
   .hero h1{font-size:clamp(2.6rem,12.5vw,4.4rem);white-space:normal;max-width:none}
+}
+
+/* Desktop/tablet only: truly full-screen cover. Mobile (<=820px) stays exactly as-is. */
+@media (min-width:821px){
+  .hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;margin-top:0;max-width:none;object-fit:cover;object-position:center 18%;flex:none;align-self:stretch}
+  .hero-media::after{width:min(50rem,80vw);height:72%}
+  .hero h1{max-width:18ch}
+  [data-theme="lounge"] .nav{color:#1A1410}
+  [data-theme="lounge"] .nav.solid,[data-theme="lounge"] .nav.open{color:var(--ink)}
 }
 
 /* vintage print frame (stills + the ring video) */
@@ -121,6 +130,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 
 /* ---------- dress code ---------- */
 .dress{background:var(--ink);color:var(--bg);text-align:center;position:relative}
+[data-theme="vintage"] .dress{background:var(--accent)}
 .dress .lace-trim{position:absolute;left:0;right:0;height:28px;background-color:color-mix(in srgb,var(--bg) 55%,transparent)}
 .dress .lace-trim.top{top:0}
 .dress .lace-trim.bottom{bottom:0;transform:scaleY(-1)}
@@ -180,6 +190,20 @@ footer .logo img{height:clamp(7.5rem,22vw,12rem);width:auto;filter:drop-shadow(0
 [data-theme="ivory"] footer .logo img{filter:drop-shadow(0 0 22px rgba(255,248,240,.42)) drop-shadow(0 6px 16px rgba(0,0,0,.25))}
 footer p{font-family:var(--font-sc);letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;font-weight:500;opacity:.85}
 
+
+/* ---------- centered page body (below the hero) ---------- */
+section .eyebrow,section h2{text-align:center}
+section h2{margin-left:auto;margin-right:auto}
+section p{max-width:60ch;margin-left:auto;margin-right:auto}
+.grid2,.people,.count,.photos{margin-inline:auto}
+.btns{justify-content:center}
+.card{text-align:center}
+.card .btns{justify-content:center}
+.people h3{text-align:center}
+#stay .card{max-width:36rem;margin-inline:auto}
+.faq .wrap{text-align:center}
+.faq .wrap > .reveal, .faq details, .faq summary, .faq details p{text-align:left}
+.faq .wrap > .reveal{max-width:44rem;margin-inline:auto}
 /* ---------- theme switcher ---------- */
 .switch{position:fixed;right:1rem;bottom:1rem;z-index:60;display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 1.5rem);gap:.35rem;padding:.45rem;border-radius:999px;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
 .switch button{width:28px;height:28px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;background:linear-gradient(135deg,var(--a) 50%,var(--b) 50%);transition:transform .2s}

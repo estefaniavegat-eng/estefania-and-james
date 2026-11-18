@@ -16,7 +16,7 @@
   --surface:  #FFFCF6;  /* cards / prints              */
   --ink:      #1A1410;  /* deep warm black             */
   --muted:    #7A7168;  /* secondary text              */
-  --accent:   #1A1410;  /* bands, buttons, rules       */
+  --accent:   #2F2A26;  /* warm charcoal bands / footer */
   --accent-2: #8B1A1A;  /* wine: script, rose accents  */
   --on-accent:#FBF8F0;  /* text sitting on --accent    */
   --gold:     #8B1A1A;  /* unused in vintage; lounge sets a real gold */
@@ -24,8 +24,8 @@
 
 
 [data-theme="lounge"] {             /* cigar-lounge — preview with ?theme=lounge */
-  --bg:       #13110F;  /* near-black warm charcoal    */
-  --surface:  #1C1916;  /* slightly lighter charcoal   */
+  --bg:       #1C1916;  /* softer charcoal (not pure black) */
+  --surface:  #26221E;  /* slightly lighter charcoal   */
   --ink:      #F3EDE3;  /* cream text                  */
   --muted:    #A89F93;  /* secondary cream             */
   --accent:   #6B1E24;  /* burgundy bands / footer     */
