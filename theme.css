@@ -1,0 +1,51 @@
+/* =====================================================================
+   🎨  THEME — the ONE place to change the site's colors
+   ---------------------------------------------------------------------
+   Easiest:  open index.html and change  data-theme="burgundy"  on the
+             <html> tag to  amalfi, midnight, or sage.
+   Custom:   edit the 6 hex values in any block below (or the :root one).
+             Every color on the site comes from these variables.
+   Guests can also tap the color dots (bottom-right) to preview palettes;
+   to hide that switcher, set  showThemeSwitcher: false  in index.html.
+   ===================================================================== */
+
+:root,
+[data-theme="burgundy"] {           /* default — matches the save-the-date stripes */
+  --bg:       #F5EEE4;  /* page background            */
+  --surface:  #FFFFFF;  /* cards                      */
+  --ink:      #2B1614;  /* main text                  */
+  --muted:    #7A6460;  /* secondary text             */
+  --accent:   #6B1E24;  /* buttons, highlights, bands */
+  --accent-2: #C9A27E;  /* small details / glow       */
+  --on-accent:#FFF8F0;  /* text sitting on --accent   */
+}
+
+[data-theme="amalfi"] {             /* lemon + sea blue, like the photos */
+  --bg:       #FFFBEC;
+  --surface:  #FFFFFF;
+  --ink:      #10284B;
+  --muted:    #55688A;
+  --accent:   #1F5FA8;
+  --accent-2: #F2C230;
+  --on-accent:#FFFDF2;
+}
+
+[data-theme="midnight"] {           /* dark mode, black-tie gold */
+  --bg:       #0D0E13;
+  --surface:  #171922;
+  --ink:      #F3ECE0;
+  --muted:    #A39C90;
+  --accent:   #D6B36A;
+  --accent-2: #8E7CF0;
+  --on-accent:#14110B;
+}
+
+[data-theme="sage"] {               /* soft garden green + blush */
+  --bg:       #EDF0E8;
+  --surface:  #FAFBF7;
+  --ink:      #1E2A21;
+  --muted:    #627064;
+  --accent:   #4F6F52;
+  --accent-2: #DDA28E;
+  --on-accent:#F7FAF4;
+}

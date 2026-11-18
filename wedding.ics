@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Estefania & James//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:estefania-james-wedding-20271016@wedding
+DTSTAMP:20261118T120000Z
+DTSTART;VALUE=DATE:20271016
+DTEND;VALUE=DATE:20271017
+SUMMARY:Estefania & James's Wedding
+LOCATION:Pete Dye Golf Club\, 801 Aaron Smith Drive\, Bridgeport\, WV 26330
+DESCRIPTION:Ceremony (outdoors) and reception (indoors) at Pete Dye Golf Club. Black tie attire.
+END:VEVENT
+END:VCALENDAR
