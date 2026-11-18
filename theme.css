@@ -2,7 +2,7 @@
    🎨  THEME — the ONE place to change the site's colors
    ---------------------------------------------------------------------
    Easiest:  open index.html and change  data-theme="burgundy"  on the
-             <html> tag to  amalfi, midnight, or sage.
+             <html> tag to  noir, ivory, amalfi, midnight, or sage.
    Custom:   edit the 6 hex values in any block below (or the :root one).
              Every color on the site comes from these variables.
    Guests can also tap the color dots (bottom-right) to preview palettes;
@@ -48,4 +48,24 @@
   --accent:   #4F6F52;
   --accent-2: #DDA28E;
   --on-accent:#F7FAF4;
+}
+
+[data-theme="noir"] {               /* crisp black & white, rose used sparingly */
+  --bg:       #F7F7F5;
+  --surface:  #FFFFFF;
+  --ink:      #111111;
+  --muted:    #6B6B6B;
+  --accent:   #111111;  /* bands, big card, footer */
+  --accent-2: #8B1A1F;  /* rose red, small highlights only */
+  --on-accent:#F7F7F5;
+}
+
+[data-theme="ivory"] {              /* warm ivory + black, deep rose accent */
+  --bg:       #FAF6EF;
+  --surface:  #FFFBF5;
+  --ink:      #14110E;
+  --muted:    #7A736A;
+  --accent:   #7A1519;
+  --accent-2: #D4B896;  /* champagne hairlines */
+  --on-accent:#FAF6EF;
 }

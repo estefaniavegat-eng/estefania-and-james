@@ -48,4 +48,45 @@
   function mark(){sw.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===root.dataset.theme)})}
   sw.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;root.dataset.theme=b.dataset.t;try{localStorage.setItem('ej-theme',b.dataset.t)}catch(_){}mark()});
   mark();
+
+  // Photo lightbox
+  (function(){
+    var figs=[].slice.call(document.querySelectorAll('.photos figure'));
+    if(!figs.length) return;
+    var lb=document.createElement('div');
+    lb.className='lightbox';
+    lb.hidden=true;
+    lb.setAttribute('role','dialog');
+    lb.setAttribute('aria-modal','true');
+    lb.setAttribute('aria-label','Photo');
+    lb.innerHTML='<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><img alt=""><button class="lb-next" aria-label="Next">›</button>';
+    document.body.appendChild(lb);
+    var img=lb.querySelector('img');
+    var i=0;
+    var items=figs.map(function(f){var el=f.querySelector('img');return {src:el.getAttribute('src'),alt:el.getAttribute('alt')||''}});
+    function show(n){
+      i=(n+items.length)%items.length;
+      img.src=items[i].src; img.alt=items[i].alt;
+      lb.hidden=false; document.body.style.overflow='hidden';
+    }
+    function hide(){ lb.hidden=true; document.body.style.overflow=''; img.removeAttribute('src'); }
+    figs.forEach(function(f,n){
+      f.setAttribute('tabindex','0');
+      f.setAttribute('role','button');
+      f.setAttribute('aria-label','View photo: '+(items[n].alt||''));
+      f.addEventListener('click',function(){show(n)});
+      f.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(n)}});
+    });
+    lb.querySelector('.lb-close').addEventListener('click',hide);
+    lb.querySelector('.lb-prev').addEventListener('click',function(e){e.stopPropagation();show(i-1)});
+    lb.querySelector('.lb-next').addEventListener('click',function(e){e.stopPropagation();show(i+1)});
+    lb.addEventListener('click',function(e){if(e.target===lb)hide()});
+    addEventListener('keydown',function(e){
+      if(lb.hidden)return;
+      if(e.key==='Escape')hide();
+      if(e.key==='ArrowLeft')show(i-1);
+      if(e.key==='ArrowRight')show(i+1);
+    });
+  })();
+
 })();

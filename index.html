@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Change the default color palette here: burgundy | amalfi | midnight | sage  (see theme.css) -->
+<!-- Change the default color palette here: burgundy | noir | ivory | amalfi | midnight | sage  (see theme.css) -->
 <html lang="en" data-theme="burgundy">
 <head>
 <meta charset="utf-8">
@@ -10,7 +10,10 @@
 <meta property="og:description" content="Pete Dye Golf Club · Bridgeport, WV">
 <meta property="og:image" content="assets/photos/hero.jpg">
 <meta name="theme-color" content="#6B1E24">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png">
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="theme.css">
@@ -30,7 +33,12 @@
 
 <nav class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="mono">E&amp;J</a>
+    <a href="#top" class="logo" aria-label="Estefania and James">
+      <picture>
+        <source type="image/webp" srcset="assets/brand/rose-256.webp">
+        <img src="assets/brand/rose-256.png" width="210" height="256" alt="">
+      </picture>
+    </a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="links" id="links">
       <li><a href="#details">Details</a></li>
@@ -181,7 +189,12 @@
 
 <footer>
   <div class="wrap">
-    <span class="mono">E&amp;J</span>
+    <div class="logo">
+      <picture>
+        <source type="image/webp" srcset="assets/brand/rose-512.webp">
+        <img src="assets/brand/rose-512.png" width="420" height="512" alt="">
+      </picture>
+    </div>
     <p>10.16.2027 · Bridgeport, West Virginia</p>
     <p style="opacity:.6">Formal invitation to follow</p>
   </div>
@@ -189,6 +202,8 @@
 
 <div class="switch" id="switch" aria-label="Color theme">
   <button data-t="burgundy" style="--a:#6B1E24;--b:#F5EEE4" title="Burgundy"></button>
+  <button data-t="noir"     style="--a:#111111;--b:#F7F7F5" title="Noir"></button>
+  <button data-t="ivory"    style="--a:#7A1519;--b:#FAF6EF" title="Ivory"></button>
   <button data-t="amalfi"   style="--a:#1F5FA8;--b:#F2C230" title="Amalfi"></button>
   <button data-t="midnight" style="--a:#0D0E13;--b:#D6B36A" title="Midnight"></button>
   <button data-t="sage"     style="--a:#4F6F52;--b:#DDA28E" title="Sage"></button>
