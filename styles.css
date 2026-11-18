@@ -73,7 +73,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 
 /* Desktop/tablet only: truly full-screen cover. Mobile (<=820px) stays exactly as-is. */
 @media (min-width:821px){
-  .hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;margin-top:0;max-width:none;object-fit:cover;object-position:center 18%;flex:none;align-self:stretch}
+  .hero-video,.hero-fallback{position:absolute;inset:0;width:100%;height:100%;margin-top:0;max-width:none;object-fit:cover;object-position:center 18%;flex:none;align-self:stretch;transform:scale(1.12);transform-origin:center 32%}
   .hero-media::after{width:min(50rem,80vw);height:72%}
   .hero h1{max-width:18ch}
   [data-theme="lounge"] .nav{color:#1A1410}
@@ -200,10 +200,15 @@ section p{max-width:60ch;margin-left:auto;margin-right:auto}
 .card{text-align:center}
 .card .btns{justify-content:center}
 .people h3{text-align:center}
-#stay .card{max-width:36rem;margin-inline:auto}
+#stay .lodging{max-width:36rem;margin-inline:auto}
 .faq .wrap{text-align:center}
 .faq .wrap > .reveal, .faq details, .faq summary, .faq details p{text-align:left}
 .faq .wrap > .reveal{max-width:44rem;margin-inline:auto}
+
+.travel-split{margin-top:5rem}
+.airports{margin-top:1.25rem}
+.airport-name{font-family:var(--font-sc);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:500;color:var(--muted)}
+.drive{font-family:var(--font-serif);font-size:clamp(1.15rem,2.4vw,1.45rem);color:var(--ink);margin:.55rem auto .35rem}
 /* ---------- theme switcher ---------- */
 .switch{position:fixed;right:1rem;bottom:1rem;z-index:60;display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:calc(100vw - 1.5rem);gap:.35rem;padding:.45rem;border-radius:999px;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.18)}
 .switch button{width:28px;height:28px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;background:linear-gradient(135deg,var(--a) 50%,var(--b) 50%);transition:transform .2s}
