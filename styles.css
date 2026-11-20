@@ -187,7 +187,7 @@ section{padding:clamp(4.2rem,10vw,7.5rem) 0;scroll-margin-top:64px}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary i{flex:none;width:36px;height:36px;border-radius:1px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-style:normal;font-size:1.3rem;font-family:var(--font-serif);transition:transform .3s}
 .faq details[open] summary i{transform:rotate(45deg)}
-.faq details p{margin:0 0 1.5rem;max-width:44rem;color:var(--muted);font-size:1.08rem}
+.faq details p{margin:0 0 1.5rem 0;max-width:44rem;color:var(--muted);font-size:1.08rem}
 
 /* ---------- footer ---------- */
 footer{background:var(--accent);color:var(--on-accent);text-align:center;padding:5rem 0 3rem;position:relative}
@@ -212,6 +212,7 @@ section p{max-width:60ch;margin-left:auto;margin-right:auto}
 .faq .wrap{text-align:center}
 .faq .wrap > .reveal, .faq details, .faq summary, .faq details p{text-align:left}
 .faq .wrap > .reveal{max-width:44rem;margin-inline:auto}
+.faq details > p{margin-left:0;margin-right:0;text-align:left}
 
 .travel-split{margin-top:5rem}
 .airports{margin-top:1.25rem}
