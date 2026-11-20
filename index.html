@@ -9,22 +9,22 @@
 <meta property="og:title" content="Estefanía &amp; James · 10.16.2027">
 <meta property="og:description" content="Pete Dye Golf Club · Bridgeport, WV">
 <meta property="og:image" content="assets/video/ring-poster.jpg">
-<meta name="theme-color" content="#FBF8F0">
+<meta name="theme-color" content="#F4EFE7">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/brand/favicon-48.png">
 <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Cormorant+SC:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="theme.css?v=15">
-<link rel="stylesheet" href="styles.css?v=15">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css?v=16">
+<link rel="stylesheet" href="styles.css?v=16">
 <script>
   /* ===== SITE SETTINGS — edit these, nothing else needed ===== */
   window.SITE = {
     weddingDate: "2027-10-16T00:00:00-04:00", // countdown target (Eastern time)
     rsvpUrl: "",        // paste an RSVP link here and an RSVP button appears (empty = hidden)
     registryUrl: "",    // paste a registry link here and a Registry button appears (empty = hidden)
-    showThemeSwitcher: true
+    showThemeSwitcher: false
   };
   (function(){
     var allowed={vintage:1,lounge:1,noir:1,burgundy:1,ivory:1,amalfi:1,midnight:1,sage:1};
@@ -56,8 +56,8 @@
 <header class="hero" id="top">
   <div class="hero-media">
     <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/ring-poster.jpg" width="1080" height="1920" aria-label="Estefanía laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea">
-      <source src="assets/video/ring.mp4?v=15" type="video/mp4">
-      <source src="assets/video/ring.webm?v=15" type="video/webm">
+      <source src="assets/video/ring.mp4?v=16" type="video/mp4">
+      <source src="assets/video/ring.webm?v=16" type="video/webm">
     </video>
     <img class="hero-fallback" src="assets/video/ring-poster.jpg" alt="Estefanía laughing and showing her engagement ring, with James beside her on a balcony overlooking the sea" width="1080" height="1920" hidden>
   </div>
@@ -70,14 +70,12 @@
   </div>
 </header>
 
-<div class="marquee" aria-hidden="true"><div>
-  We're getting married <b>◆</b> October 16, 2027 <b>◆</b> Pete Dye Golf Club <b>◆</b> Bridgeport, West Virginia <b>◆</b>
-  We're getting married <b>◆</b> October 16, 2027 <b>◆</b> Pete Dye Golf Club <b>◆</b> Bridgeport, West Virginia <b>◆</b>
-</div></div>
+<div class="hero-divider" aria-hidden="true"></div>
 
 <section id="details">
   <div class="wrap">
-    <div class="eyebrow reveal">The countdown</div>
+    <div class="eyebrow reveal">The wedding</div>
+    <h2 class="reveal">The <em>Wedding</em></h2>
     <div class="count reveal" id="count">
       <div><b id="d">–</b><small>Days</small></div>
       <div><b id="h">–</b><small>Hours</small></div>
@@ -85,24 +83,22 @@
       <div><b id="s">–</b><small>Seconds</small></div>
     </div>
 
-    <div class="eyebrow reveal" style="margin-top:5rem">The details</div>
-    <h2 class="reveal">The <em>day</em></h2>
-    <div class="grid2">
-      <div class="card big reveal">
+    <div class="facts reveal">
+      <div class="fact">
         <div class="eyebrow">Saturday</div>
-        <div class="date-big">10.16<br>2027</div>
+        <div class="date-big">10.16.2027</div>
         <ul class="timeline">
           <li><strong>Ceremony</strong><span>Outdoors</span></li>
           <li><strong>Reception</strong><span>Indoors</span></li>
         </ul>
         <div class="btns">
-          <a class="btn" href="wedding.ics" download="Estefania-and-James-Wedding.ics">＋ Add to calendar</a>
+          <a class="btn" href="wedding.ics" download="Estefania-and-James-Wedding.ics">Add to calendar</a>
           <a class="btn ghost" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Estefan%C3%ADa+%26+James%27s+Wedding&dates=20271016/20271017&location=Pete+Dye+Golf+Club,+801+Aaron+Smith+Drive,+Bridgeport,+WV+26330&details=Black+tie+attire.">Google Calendar</a>
         </div>
       </div>
-      <div class="card reveal">
+      <div class="fact">
         <div class="eyebrow">The venue</div>
-        <h3>Pete Dye<br>Golf Club</h3>
+        <h3>Pete Dye Golf Club</h3>
         <p>801 Aaron Smith Drive<br>Bridgeport, WV 26330</p>
         <p><a href="tel:+13048422801">(304) 842-2801</a></p>
         <div class="btns">
@@ -115,28 +111,32 @@
   </div>
 </section>
 
+<div class="oxblood-band" aria-hidden="true">
+  <p>October 16, 2027 · Pete Dye Golf Club · Bridgeport</p>
+</div>
+
 
 <section id="photos">
   <div class="wrap">
-    <div class="eyebrow reveal">Us</div>
-    <h2 class="reveal">A few <em>favorites</em></h2>
+    <div class="eyebrow reveal">Our moments</div>
+    <h2 class="reveal">Our <em>Moments</em></h2>
     <div class="photos">
-      <figure class="print reveal">
-        <picture>
-          <source type="image/webp" srcset="assets/photos/smile.webp">
-          <img src="assets/photos/smile.jpg" alt="Estefanía and James smiling at each other" loading="lazy" width="1200" height="1600">
-        </picture>
-      </figure>
-      <figure class="print reveal">
+      <figure class="photos-lead is-bw reveal">
         <picture>
           <source type="image/webp" srcset="assets/photos/hero.webp">
           <img src="assets/photos/hero.jpg" alt="James lifting Estefanía for a kiss by the sea" loading="lazy" width="1200" height="1600">
         </picture>
       </figure>
-      <figure class="print reveal">
+      <figure class="photos-side is-color reveal">
         <picture>
-          <source type="image/webp" srcset="assets/photos/dance.webp">
-          <img src="assets/photos/dance.jpg" alt="Estefanía and James dancing under the trees" loading="lazy" width="760" height="1013">
+          <source type="image/webp" srcset="assets/photos/smile-color.webp">
+          <img src="assets/photos/smile-color.jpg" alt="Estefanía and James smiling at each other" loading="lazy" width="1200" height="1600">
+        </picture>
+      </figure>
+      <figure class="photos-side is-color reveal">
+        <picture>
+          <source type="image/webp" srcset="assets/photos/dance-color.webp">
+          <img src="assets/photos/dance-color.jpg" alt="Estefanía and James dancing under the trees" loading="lazy" width="760" height="1013">
         </picture>
       </figure>
     </div>
@@ -145,8 +145,8 @@
 
 <section id="registry">
   <div class="wrap">
-    <div class="eyebrow reveal">With love</div>
-    <h2 class="reveal">The <em>registry</em></h2>
+    <div class="eyebrow reveal">The finishing details</div>
+    <h2 class="reveal">The <em>Registry</em></h2>
     <p class="note reveal">Details coming soon.</p>
   </div>
 </section>
@@ -156,7 +156,7 @@
     <div class="eyebrow reveal">Q + A</div>
     <h2 class="reveal">Good <em>questions</em></h2>
         <div class="reveal">
-      <details open>
+      <details>
         <summary>When do I need to RSVP by?<i>+</i></summary>
         <p>Details coming soon.</p>
       </details>
@@ -183,8 +183,8 @@
       <details>
         <summary>How do I get there?<i>+</i></summary>
         <p>You can fly into Clarksburg (CKB) or Pittsburgh (PIT).</p>
-        <div class="grid2 faq-cards airports">
-          <div class="card">
+        <div class="routes">
+          <div class="route">
             <div class="eyebrow">CKB</div>
             <h3>Clarksburg</h3>
             <p class="airport-name">North Central West Virginia Airport</p>
@@ -192,7 +192,7 @@
             <p>The closest airport — just a few minutes from the club. Flights are limited.</p>
             <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=North+Central+West+Virginia+Airport+CKB&amp;destination=801+Aaron+Smith+Drive,+Bridgeport,+WV+26330">Directions ↗</a></div>
           </div>
-          <div class="card">
+          <div class="route">
             <div class="eyebrow">PIT</div>
             <h3>Pittsburgh International</h3>
             <p class="airport-name">Pittsburgh International Airport</p>
@@ -215,7 +215,6 @@
 </section>
 
 <footer>
-  <div class="lace-trim" aria-hidden="true"></div>
   <div class="wrap">
     <div class="logo">
       <picture>
@@ -224,21 +223,11 @@
       </picture>
     </div>
     <p>10.16.2027 · Bridgeport, West Virginia</p>
-    <p style="opacity:.6">Formal invitation to follow</p>
+    <p>Formal invitation to follow</p>
   </div>
 </footer>
 
-<div class="switch" id="switch" aria-label="Color theme">
-  <button data-t="vintage"  style="--a:#8B1A1A;--b:#FBF8F0" title="Vintage"></button>
-  <button data-t="lounge"   style="--a:#6B1E24;--b:#C4A46A" title="Lounge"></button>
-  <button data-t="noir"     style="--a:#111111;--b:#F7F7F5" title="Noir"></button>
-  <button data-t="burgundy" style="--a:#6B1E24;--b:#F5EEE4" title="Burgundy"></button>
-  <button data-t="ivory"    style="--a:#7A1519;--b:#FAF6EF" title="Ivory"></button>
-  <button data-t="amalfi"   style="--a:#1F5FA8;--b:#F2C230" title="Amalfi"></button>
-  <button data-t="midnight" style="--a:#0D0E13;--b:#D6B36A" title="Midnight"></button>
-  <button data-t="sage"     style="--a:#4F6F52;--b:#DDA28E" title="Sage"></button>
-</div>
 
-<script src="main.js?v=15"></script>
+<script src="main.js?v=16"></script>
 </body>
 </html>

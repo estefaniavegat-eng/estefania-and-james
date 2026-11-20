@@ -11,15 +11,15 @@
    ===================================================================== */
 
 :root,
-[data-theme="vintage"] {          /* default — cream paper, ink, wine script, rose */
-  --bg:       #FBF8F0;  /* warm cream paper            */
-  --surface:  #FFFCF6;  /* cards / prints              */
-  --ink:      #1A1410;  /* deep warm black             */
-  --muted:    #7A7168;  /* secondary text              */
-  --accent:   #2F2A26;  /* warm charcoal bands / footer */
-  --accent-2: #8B1A1A;  /* wine: script, rose accents  */
-  --on-accent:#FBF8F0;  /* text sitting on --accent    */
-  --gold:     #8B1A1A;  /* unused in vintage; lounge sets a real gold */
+[data-theme="vintage"] {          /* default — editorial ivory, espresso, oxblood */
+  --bg:       #F4EFE7;  /* ivory                       */
+  --surface:  #F8F4EE;  /* slightly lighter ivory      */
+  --ink:      #211B19;  /* espresso                    */
+  --muted:    #7A7068;  /* secondary text              */
+  --accent:   #6B1E2B;  /* oxblood                     */
+  --accent-2: #6B1E2B;  /* oxblood accents             */
+  --on-accent:#F4EFE7;  /* ivory on oxblood            */
+  --gold:     #B7A184;  /* antique gold, tiny details  */
 }
 
 
